@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>188bet · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f0e8;
+            font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2b241c;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fcfaf7;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+            padding: 2.8rem 2rem 3.2rem;
+        }
+
+        @media (max-width: 540px) {
+            .page-wrap {
+                padding: 1.8rem 1.2rem;
+            }
+        }
+
+        /* 主视觉/hero */
+        .hero {
+            text-align: center;
+            padding: 0.8rem 0 2.2rem;
+            border-bottom: 1px solid #e5ddd2;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #1f1b15;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #7b6e5e;
+            margin-top: 0.4rem;
+            display: inline-block;
+            background: #ede7dd;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin: 2.4rem 0;
+        }
+
+        @media (max-width: 560px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03), 0 0 0 1px #ece6dd inset;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 0 0 1px #d6cdbe inset;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2f281f;
+            margin-bottom: 0.7rem;
+            border-left: 4px solid #b8a78c;
+            padding-left: 0.7rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4b4136;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 0.6rem;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.93rem;
+            color: #4d4236;
+        }
+
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #9c8b75;
+            font-weight: 700;
+        }
+
+        /* 提醒框 / callout */
+        .callout {
+            background: #f3ede4;
+            border-left: 6px solid #c7b5a0;
+            padding: 1.2rem 1.6rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            font-size: 0.96rem;
+            color: #3c342b;
+        }
+
+        .callout strong {
+            color: #1f1913;
+        }
+
+        .callout a {
+            color: #5f4f3b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            font-weight: 500;
+        }
+
+        .callout a:hover {
+            color: #2c241c;
+        }
+
+        /* 自然链接段落 */
+        .natural-link-section {
+            background: #faf7f2;
+            padding: 1.6rem 1.8rem;
+            border-radius: 20px;
+            margin: 2rem 0 1.2rem;
+            border: 1px solid #e7dfd3;
+        }
+
+        .natural-link-section p {
+            margin-bottom: 0.8rem;
+        }
+
+        .natural-link-section a {
+            color: #6d5e4b;
+            font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .natural-link-section a:hover {
+            color: #2f261d;
+        }
+
+        /* 常见问题 / faq 摘要 */
+        .faq-summary {
+            margin: 2rem 0 0.6rem;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2b221a;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #e0d6c8;
+            padding-bottom: 0.5rem;
+        }
+
+        .faq-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px dashed #e3dacd;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 550;
+            color: #2e261e;
+        }
+
+        .faq-a {
+            color: #52473b;
+            font-size: 0.94rem;
+            margin-top: 0.2rem;
+            padding-left: 0.8rem;
+        }
+
+        .faq-a a {
+            color: #6d5e4b;
+            text-decoration: underline;
+        }
+
+        /* 页脚 */
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e6ddd0;
+            font-size: 0.85rem;
+            color: #7d6f5d;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #7d6f5d;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+
+        <!-- 主视觉 -->
+        <div class="hero">
+            <h1>188bet · 使用指南与提醒</h1>
+            <span class="sub">简明 · 清晰 · 整理自日常经验</span>
+        </div>
+
+        <!-- 用途卡片 x 2 行 -->
+        <div class="card-grid">
+            <div class="card">
+                <h3>🃏 平台用途</h3>
+                <p>从网页端快速浏览体育赛事、娱乐场及各类游戏项目。页面结构清晰，分类选项集中在左侧导航，可依据个人偏好筛选。</p>
+            </div>
+            <div class="card">
+                <h3>📱 移动端适配</h3>
+                <p>手机浏览器打开即可直接使用，无需额外下载。响应式布局在屏幕较小的设备上会自动调整按钮和菜单位置，操作流畅。</p>
+            </div>
+            <div class="card">
+                <h3>🧭 适合哪些人</h3>
+                <ul>
+                    <li>希望一站式浏览多类型娱乐内容的用户</li>
+                    <li>习惯用网页记录、观察比赛动态的爱好者</li>
+                    <li>想先了解界面风格再决定是否深入体验的人</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>⚙️ 日常使用要点</h3>
+                <ul>
+                    <li>推荐在稳定网络环境下使用，页面加载更快</li>
+                    <li>首次使用可先浏览“常见问题”或帮助区域</li>
+                    <li>部分功能需要注册账户后方可完整使用</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 提醒框 -->
+        <div class="callout">
+            <strong>💡 访问提醒</strong>：请确认所在地区对网络娱乐平台的相关规定。使用前建议阅读平台的服务条款，合理分配时间，保持适度。 
+            如果你正在寻找可直接进入的地址，这里有一个链接指向 <a href="https://official-188bet.com">188bet</a>，但记得先了解当地政策。
+        </div>
+
+        <!-- 自然链接段落 -->
+        <div class="natural-link-section">
+            <p>许多用户第一次接触这类服务时，会先观察网站风格是否直观。以 <a href="https://official-188bet.com">188bet</a> 为例，它的首页布局偏传统门户型，各类目的入口都放在显眼位置。体育、真人、电子游戏等板块各自独立，你可以直接点击感兴趣的分类进入，无需层层跳转。</p>
+            <p>如果你的网络环境不太稳定，可以尝试刷新页面或更换一个浏览器。有人反馈关闭广告拦截插件后部分内容显示更完整。总之，保持浏览器为较新版本通常能获得更好体验。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <h2>常见问题摘要</h2>
+            <div class="faq-item">
+                <div class="faq-q">Q：是否需要注册才能查看内容？</div>
+                <div class="faq-a">大部分浏览操作无需注册，但参与互动或使用完整功能需要创建账户。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：<a href="https://official-188bet.com">188bet</a> 在手机和平板上体验如何？</div>
+                <div class="faq-a">手机和平板通过浏览器访问即可，页面会自动适配。按钮大小和间距针对触控做了优化，横向滚动的情况较少。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：遇到页面加载慢或白屏怎么办？</div>
+                <div class="faq-a">先检查网络连接；尝试清除浏览器缓存或使用无痕模式；部分网络环境可能受运营商限制，可更换网络再试。</div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer-note">
+            本页面仅为信息整理与使用说明，不构成任何引导或推广。内容基于公开界面描述，仅供参考。所有操作请遵守当地法律。
+        </div>
+
+    </div>
+</body>
+</html>
