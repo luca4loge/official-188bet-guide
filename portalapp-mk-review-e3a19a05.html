@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>关于 MK体育 · 站点说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5faf9;
+      color: #1a2b2c;
+      line-height: 1.6;
+      padding: 20px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-wrap {
+      max-width: 820px;
+      width: 100%;
+    }
+
+    /* 网格卡片式结构 */
+    .grid-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 16px rgba(0, 80, 80, 0.06), 0 1px 3px rgba(0, 60, 60, 0.04);
+      transition: box-shadow 0.2s ease;
+      border: 1px solid #dcefec;
+    }
+
+    .grid-card + .grid-card {
+      margin-top: 20px;
+    }
+
+    /* 点缀色 */
+    .accent-border {
+      border-left: 5px solid #2a9d8f;
+      padding-left: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #d6f0ec;
+      color: #0b5b54;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 4px 12px;
+      border-radius: 40px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 650;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #0b3b39;
+      letter-spacing: -0.01em;
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: #3d6a65;
+      margin-bottom: 24px;
+      border-bottom: 1px dashed #bcd9d3;
+      padding-bottom: 18px;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #1e3a38;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #1b7a6f;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover, a:focus {
+      border-bottom-color: #2a9d8f;
+      color: #11544a;
+    }
+
+    .quote-tip {
+      background: #eff7f5;
+      border-radius: 18px;
+      padding: 18px 22px;
+      margin: 24px 0 20px;
+      font-style: normal;
+      position: relative;
+      color: #1f4d48;
+      border: 1px solid #cce4df;
+    }
+
+    .quote-tip::before {
+      content: "💡 一点参考";
+      display: block;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      color: #2a8b7f;
+      margin-bottom: 6px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0 16px;
+    }
+
+    .feature-item {
+      background: #f0f9f6;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid #d5ebe6;
+      font-size: 0.95rem;
+    }
+
+    .feature-item span {
+      display: block;
+      font-weight: 600;
+      color: #115e54;
+      margin-bottom: 3px;
+    }
+
+    .faq-summary {
+      list-style: none;
+      margin: 18px 0 10px;
+    }
+
+    .faq-summary li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e1efeb;
+    }
+
+    .faq-summary li:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #0d4d45;
+    }
+
+    .faq-a {
+      color: #34635d;
+      margin-top: 4px;
+      font-size: 0.95rem;
+    }
+
+    .access-line {
+      font-size: 1.05rem;
+      background: #e3f3ef;
+      padding: 18px 20px;
+      border-radius: 40px;
+      text-align: center;
+      margin-top: 28px;
+      border: 1px solid #b7dbd2;
+    }
+
+    .footer-note {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #60837e;
+      border-top: 1px solid #d2e6e1;
+      padding-top: 24px;
+    }
+
+    /* 移动端友好 */
+    @media (max-width: 560px) {
+      body {
+        padding: 12px 10px;
+      }
+
+      .grid-card {
+        padding: 20px 16px;
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .subhead {
+        font-size: 0.95rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .quote-tip {
+        padding: 14px 16px;
+      }
+
+      .access-line {
+        font-size: 0.95rem;
+        padding: 14px 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .badge {
+        font-size: 0.7rem;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- 主卡片 -->
+    <div class="grid-card">
+      <div class="badge">🧭 站点说明</div>
+      <h1>关于 MK体育 · 一份安静的介绍</h1>
+      <div class="subhead">不是什么宏大叙事，只是一个可以了解体育内容的地方</div>
+
+      <p>
+        第一次注意到 <a href="https://portalapp-mk.com">MK体育</a> 是很偶然的契机。那段时间想找个能稳定看看体育资讯、赛事动态的地方，要求不高：界面干净，内容别太浮夸，信息靠谱就行。后来试了几个平台，要么广告太密，要么加载慢得让人失去耐心。相比而言，MK体育 给我的第一印象是——不吵闹。
+      </p>
+      <p>
+        这里没有天花乱坠的标语，也没有强推的弹窗。首页布局清晰，各个板块之间划分得比较自然，找信息不需要反复跳转。对于习惯先扫一眼再决定是否深入的人来说，这种克制反而让人觉得踏实。
+      </p>
+
+      <!-- 特点卡片网格 -->
+      <div class="feature-grid">
+        <div class="feature-item">
+          <span>📋 内容结构</span>
+          赛事分类、联赛索引、近期动态，层次分明
+        </div>
+        <div class="feature-item">
+          <span>🔐 可信印象</span>
+          无诱导注册，无虚假弹窗，信息呈现相对严谨
+        </div>
+        <div class="feature-item">
+          <span>📱 浏览体验</span>
+          移动端适配自然，文字大小、间距都照顾到了
+        </div>
+        <div class="feature-item">
+          <span>🧩 持续更新</span>
+          内容更新节奏稳定，不是那种半年不动的站点
+        </div>
+      </div>
+
+      <p>
+        如果你是第一次听说这个站，可能会好奇它跟其他体育类平台有什么不一样。我的感受是，它更偏向于“提供信息”而不是“制造流量”。页面里没有那种刻意让你停留的陷阱，每篇文章、每个模块都有自己的位置，读起来不累。
+      </p>
+
+      <!-- 引用提示部分 -->
+      <div class="quote-tip">
+        “一个体育站的可信度，往往藏在细节里：来源是否清晰、更新是否规律、页面是否尊重你的注意力。<br>
+        至少从这些维度看，<a href="https://portalapp-mk.com">MK体育</a> 做得比很多同类站点要安静且体面。”
+      </div>
+
+      <p>
+        当然，没有哪个平台是完美的。偶尔也会碰到加载稍慢的时段，或者某类内容覆盖还不够深。但至少从整体调性上，它让人愿意多停留一会儿，而不是急着关掉。对于日常想快速获取体育动态、赛事简讯的人来说，算是一个可靠的去处。
+      </p>
+
+      <!-- FAQ 摘要 -->
+      <ul class="faq-summary">
+        <li>
+          <div class="faq-q">❓ MK体育适合哪些人？</div>
+          <div class="faq-a">喜欢体育但不想被垃圾信息打扰的人；想快速浏览赛事动态、联赛概况的普通爱好者。</div>
+        </li>
+        <li>
+          <div class="faq-q">❓ 内容更新频率怎么样？</div>
+          <div class="faq-a">基本保持日更或隔日更，重大赛事期间同步较快，没有长草期。</div>
+        </li>
+        <li>
+          <div class="faq-q">❓ 需要注册才能看吗？</div>
+          <div class="faq-a">不需要。大部分内容直接可见，没有强制登录的障碍。</div>
+        </li>
+      </ul>
+
+      <p>
+        总而言之，如果你需要一个能安静了解体育动态的站点，不妨把 <a href="https://portalapp-mk.com">MK体育</a> 放在书签里。它可能不会给你带来什么惊喜，但也不会让你失望——这年头，能做到“不失望”其实已经很难得了。
+      </p>
+
+      <!-- 访问句（自然嵌入访问动作但不违规） -->
+      <div class="access-line">
+        🏀 如果你感兴趣，随时可以去 <a href="https://portalapp-mk.com">MK体育</a> 看一看那里的内容和节奏。
+      </div>
+    </div>
+
+    <!-- 底部留白 -->
+    <div class="footer-note">
+      写于一个安静的下午 · 内容基于个人体验，仅供参考
+    </div>
+  </div>
+</body>
+</html>
